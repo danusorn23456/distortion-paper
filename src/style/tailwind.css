@@ -12,25 +12,11 @@ body{
     box-sizing:border-box;
 }
 
-@keyframes screen{
-    0%{
-        transform:translateY(100%);
-    }
-    100%{
-        transform:translateY(0%);
-    }
-}
-
-.screen{
-    animation:screen 1s ease-in;
-}
 
 .title{
-    @apply text-8xl text-white font-medium select-none transition-all duration-500 hover:text-opacity-0;
+    @apply text-6xl text-white font-medium select-none transition-all duration-500 hover:text-opacity-0;
 }
 
 .title:hover{
-    transformStyle:'preverse-3d';
-    transform:translateX(10vw);
     -webkit-text-stroke: 1px white;
 }
