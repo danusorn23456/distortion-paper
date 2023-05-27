@@ -62,14 +62,30 @@ function App() {
     }
   ]
 
+  const mainStyle = {
+    padding: 16,
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    background: '#181818'
+  }
+
+  const titleStyle = {
+    cursor: 'pointer',
+    color: 'white',
+    textTransform: 'uppercase',
+    fontSize: '4rem'
+  }
+
   return (
     <>
       <DistortionImage src={currentSrc} />
-      <main className="p-16 h-screen flex flex-col justify-center">
+      <main style={mainStyle}>
         {
           content.map((current, index) =>
           (
-            <h2 key={current.id} className="title" onMouseEnter={() => { setCurrentSrc(current.src) }}>{current.text}</h2>
+            <h2 style={titleStyle} key={current.id} onMouseEnter={() => { setCurrentSrc(current.src) }}>{current.text}</h2>
           )
           )
         }
