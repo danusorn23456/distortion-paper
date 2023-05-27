@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import DistortionImage from './component/distortionImage';
+import { useState } from 'react';
+import DistortionImage from './component/distortion-paper';
 import img1 from './img/img-1.jpeg';
 import img2 from './img/img-2.jpeg';
 import img3 from './img/img-3.jpeg';
@@ -64,12 +64,12 @@ function App() {
 
   return (
     <>
-      <DistortionImage src={currentSrc}/>
+      <DistortionImage src={currentSrc} />
       <main className="p-16 h-screen flex flex-col justify-center">
         {
           content.map((current, index) =>
           (
-            <h2 key={current.id} className="title" onMouseEnter={() => {setCurrentSrc(current.src)}}>{current.text}</h2>
+            <h2 key={current.id} className="title" onMouseEnter={() => { setCurrentSrc(current.src) }}>{current.text}</h2>
           )
           )
         }
